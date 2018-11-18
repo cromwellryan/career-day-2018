@@ -1,0 +1,7 @@
+{
+  "twilio": {
+    "phoneNumber": "",
+    "sid": "",
+    "authToken": ""
+  }
+}
