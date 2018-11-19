@@ -11,8 +11,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "config": "^2.0.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "twilio": "^3.24.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"
