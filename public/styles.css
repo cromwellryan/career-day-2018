@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #50B7C8;
+}
+
+.section {
+  padding-bottom: 2.6em;
+}
+
+.section-header {
+  background-color: #1c4c55;
+  margin-top: 0;
+  padding: 1.1em 1em;
+  
+  font-size: 2vw;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: .75vw;
+}
+
+.section-header a {
+  color: #EAFCFF;
+}
+
+a:hover {
+  font-weight: bolder;
+}
+
+.section-listitem, .section-listitem a {
+  color: #1b1b1b;
+  font-size: 1.5vw;
+  font-weight: bold;
+  line-height: 1.7em;
+}
+
+dd {
+    color: #1b1b1b;
+}
+
+.section-listitem.bulleted {
+  list-style: inherit;
+  margin-left: 1em;
+  line-height: 3em;
+}
+
+.section-content {
+  margin-left: 2.4em;
+}
+
+.medium {
+  font-size: 1.5vw;
+}
+
+.xlarge {
+  font-size: 9vw;
+}
+
+.sparkbox-logo {
+  margin-left: 2.7em;
+  height: 200px;
+}
+
+button {
+  color: #EAFCFF;
+  background-color: #1C4C55;
+  border: none;
+  padding: 1em;
+  font-size: 1.6vw;
+}
+
+input {
+  font-size: 1.7vw;  
+  width: 6em;
+  height: 2.6em;
+  text-align: center;
+}
+
+.code {
+  color: #1b1b1b;
+  font-size: 1.5vw;
+  font-weight: bold;
+  font-family: consolas;
+  margin-bottom: 2em;
+}

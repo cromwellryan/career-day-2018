@@ -4,7 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Pusher Test</title>
+    <link rel="stylesheet" href="styles.css"></link>
     <script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+  </head>
+  <body>
+
+    <h1> Listening for texts sent to <a href="tel:1-937-669-7416">937-669-7416</a></h1>
+
+    <h2 class="section-header">❤️ 🤖 Stuff</h2>
+    <ol id="js-robots">
+    </ol>
+
+    <h2 class="section-header">Boring stuff</h2>
+    <ol id="js-boring">
+    </ol>
+
     <script>
 
       // Enable pusher logging - don't include this in production
@@ -19,6 +33,7 @@
 
       channel.bind('robot', function(data) {
         var li = document.createElement('li');
+        li.classList.add('section-listitem')
         li.innerText = data.message;
 
         var robotMessageList = document.getElementById('js-robots');
@@ -27,21 +42,13 @@
 
       channel.bind('normal', function(data) {
         var li = document.createElement('li');
+        li.classList.add('section-listitem')
         li.innerText = data.message;
 
         var boringMessageList = document.getElementById('js-boring');
         boringMessageList.appendChild(li);
       });
     </script>
-  </head>
-  <body>
-    <h1>❤️ 🤖 Stuff</h1>
-    <ol id="js-robots">
-    </ol>
-
-    <h1>Boring stuff</h1>
-    <ol id="js-boring">
-    </ol>
   </body>
 </html>
 
