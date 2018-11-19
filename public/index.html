@@ -8,7 +8,7 @@
     <script>
 
       // Enable pusher logging - don't include this in production
-      Pusher.logToConsole = true;
+      // Pusher.logToConsole = true;
 
       var pusher = new Pusher('07373c1bafd34677175f', {
         cluster: 'us2',
@@ -16,6 +16,7 @@
       });
 
       var channel = pusher.subscribe('sms-messages');
+
       channel.bind('robot', function(data) {
         var li = document.createElement('li');
         li.innerText = data.message;

@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/index.js",
-    "start:dev": "nodemon server/index.js"
+    "start": "check-node-version --package && node server/index.js",
+    "start:dev": "check-node-version --package && nodemon server/index.js"
   },
   "author": "",
   "license": "MIT",
+  "engines": {
+    "node": "~10.13.0",
+    "npm": "~6.4.1"
+  },
   "dependencies": {
+    "check-node-version": "^3.2.0",
     "config": "^2.0.1",
     "express": "^4.16.4",
     "pusher": "^2.1.3",
