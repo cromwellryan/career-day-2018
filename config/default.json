@@ -3,5 +3,11 @@
     "phoneNumber": "",
     "sid": "",
     "authToken": ""
+  },
+  "pusher": {
+    "appId": "",
+    "key": "",
+    "secret": "",
+    "cluster": "us2"
   }
 }

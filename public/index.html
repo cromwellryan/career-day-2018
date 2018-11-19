@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
-  Hi
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Pusher Test</title>
+    <script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+    <script>
+
+      // Enable pusher logging - don't include this in production
+      Pusher.logToConsole = true;
+
+      var pusher = new Pusher('07373c1bafd34677175f', {
+        cluster: 'us2',
+        forceTLS: true
+      });
+
+      var channel = pusher.subscribe('sms-messages');
+      channel.bind('robot', function(data) {
+        var li = document.createElement('li');
+        li.innerText = data.message;
+
+        var robotMessageList = document.getElementById('js-robots');
+        robotMessageList.appendChild(li);
+      });
+
+      channel.bind('normal', function(data) {
+        var li = document.createElement('li');
+        li.innerText = data.message;
+
+        var boringMessageList = document.getElementById('js-boring');
+        boringMessageList.appendChild(li);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>❤️ 🤖 Stuff</h1>
+    <ol id="js-robots">
+    </ol>
+
+    <h1>Boring stuff</h1>
+    <ol id="js-boring">
+    </ol>
+  </body>
 </html>
+
